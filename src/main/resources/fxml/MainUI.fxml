@@ -180,7 +180,7 @@
                                     </HBox>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <CheckBox fx:id="annotationCheckBox" mnemonicParsing="false" selected="false" text="生成JPA注解" />
+                                          <CheckBox fx:id="annotationCheckBox" minWidth="110.0" mnemonicParsing="false" selected="false" text="生成JPA注解" />
                                           <CheckBox fx:id="exampleCheckBox" mnemonicParsing="false" selected="false" text="生成example"/>
                                        </children>
                                     </HBox>
