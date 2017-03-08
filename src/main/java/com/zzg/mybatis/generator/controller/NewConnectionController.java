@@ -90,6 +90,9 @@ public class NewConnectionController extends BaseFXController {
 		String port = portField.getText();
 		String userName = userNameField.getText();
 		String password = passwordField.getText();
+		if("".equals(password)){
+			password = "";
+		}
 		String encoding = encodingChoice.getValue();
 		String dbType = dbTypeChoice.getValue();
 		String schema = schemaField.getText();
@@ -102,7 +105,7 @@ public class NewConnectionController extends BaseFXController {
 		config.setPassword(password);
 		config.setSchema(schema);
 		config.setEncoding(encoding);
-		if (StringUtils.isAnyEmpty(name, host, port, userName, password, encoding, dbType, schema)) {
+		if (StringUtils.isAnyEmpty(name, host, port, userName, encoding, dbType, schema)) {
 			AlertUtil.showWarnAlert("所有字段都必填");
 			return null;
 		}

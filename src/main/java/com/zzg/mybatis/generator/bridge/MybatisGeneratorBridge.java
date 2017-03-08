@@ -88,6 +88,13 @@ public class MybatisGeneratorBridge {
                 tableConfig.addColumnOverride(columnOverride);
             });
         }
+        if(!generatorConfig.isExample()){
+            tableConfig.setCountByExampleStatementEnabled(false);
+            tableConfig.setDeleteByExampleStatementEnabled(false);
+            tableConfig.setSelectByExampleStatementEnabled(false);
+            tableConfig.setUpdateByExampleStatementEnabled(false);
+        }
+
         JDBCConnectionConfiguration jdbcConfig = new JDBCConnectionConfiguration();
         jdbcConfig.setDriverClass(DbType.valueOf(selectedDatabaseConfig.getDbType()).getDriverClass());
         jdbcConfig.setConnectionURL(DbUtil.getConnectionUrlWithSchema(selectedDatabaseConfig));

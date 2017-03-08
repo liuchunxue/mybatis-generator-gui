@@ -35,8 +35,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-import static org.junit.Assert.assertNotNull;
-
 public class MainUIController extends BaseFXController {
 
     private static final Logger _LOG = LoggerFactory.getLogger(MainUIController.class);
@@ -74,6 +72,8 @@ public class MainUIController extends BaseFXController {
     private CheckBox commentCheckBox;
     @FXML
     private CheckBox annotationCheckBox;
+    @FXML
+    private CheckBox exampleCheckBox;
     @FXML
     private TreeView<String> leftDBTree;
     // Current selected databaseConfig
@@ -289,6 +289,7 @@ public class MainUIController extends BaseFXController {
         generatorConfig.setOffsetLimit(offsetLimitCheckBox.isSelected());
         generatorConfig.setComment(commentCheckBox.isSelected());
         generatorConfig.setAnnotation(annotationCheckBox.isSelected());
+        generatorConfig.setExample(exampleCheckBox.isSelected());
         return generatorConfig;
     }
 

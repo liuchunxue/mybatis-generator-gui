@@ -42,6 +42,8 @@ public class GeneratorConfig {
 
 	private boolean annotation;
 
+	private boolean example;
+
 	private String generateKeys;
 
 	public String getName() {
@@ -154,6 +156,14 @@ public class GeneratorConfig {
 
 	public void setAnnotation(boolean annotation) {
 		this.annotation = annotation;
+	}
+
+	public boolean isExample() {
+		return example;
+	}
+
+	public void setExample(boolean example) {
+		this.example = example;
 	}
 
 	public String getMapperName() {
